@@ -1,0 +1,25 @@
+{
+  "name": "frontend-start",
+  "version": "1.0.0",
+  "description": "Help you to start a new project with Gulp",
+  "author": "Siarhei Bautrukevich",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.8.1",
+    "gulp-autoprefixer": "*",
+    "gulp-connect": "*",
+    "gulp-cssmin": "*",
+    "gulp-imagemin": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-rigger": "*",
+    "gulp-uglify": "*",
+    "gulp-watch": "*",
+    "imagemin-pngquant": "*",
+    "opn": "*",
+    "rimraf": "*",
+    "fd-gulp-less": "*",
+    "gulp-gzip": "*",
+    "gulp-notify": "*"
+  }
+}

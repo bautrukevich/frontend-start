@@ -1,0 +1,43 @@
+/// ### СТИЛИ ОПРЕДЕЛЯЮЩИЕ ОБЩУЮ СТРУКТУРУ И ФОРМАТИРОВАНИЕ САЙТА ### ///
+html, body {
+    height: 100%;
+}
+html {
+    font-size: 100%;
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body {
+    font-family: "myHelvetica", Helvetica, Arial, sans-serif;
+    color: #333;
+    font-weight: normal;
+}
+.wrapper {
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -@footer-height;
+}
+.wrapper:after {
+    content: "";
+    display: block;
+}
+.container {
+    padding: 20px;
+}
+.footer, .wrapper:after {
+    height: @footer-height;
+}
+.footer {
+    background-color: #000;
+}
+.footer-padding {
+    height: 50px;
+}
+.unit-max {
+    max-width: 1200px;
+}
+.divider {
+    height: 1px;
+    background-color: @color-gray;
+}
