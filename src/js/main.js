@@ -1,16 +1,12 @@
-/*
- Third party
- */
+// # THIRD PARTY
 
-// jQuery
+// ## JQUERY
 //= ../../bower_components/jquery/dist/jquery.min.js
 
-// Kube
+// ## KUBE
 //= ../../bower_components/kube/js/kube.min.js
 
-/*
-    Custom
- */
-
-// Common
+// # APP
+//= partials/settings.js
 //= partials/common.js
+//= partials/app.js

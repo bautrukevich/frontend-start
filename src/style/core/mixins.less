@@ -2,36 +2,36 @@
 
 .animate_out() {
 
-    -webkit-transition: all 0;
-    transition: all 0s;
+	-webkit-transition: all 0;
+	transition: all 0s;
 
 }
 .animate_in() {
 
-    -webkit-transition: all 0.5;
-    transition: all 0.5s;
+	-webkit-transition: all 0.5;
+	transition: all 0.5s;
 
 }
 .saturate_in() {
 
-    -webkit-filter: saturate(1);
-    filter: saturate(1);
-    -webkit-transition: all 0.5;
-    transition: all 0.5s;
+	-webkit-filter: saturate(1);
+	filter: saturate(1);
+	-webkit-transition: all 0.5;
+	transition: all 0.5s;
 
 }
 .saturate_out() {
 
-    -webkit-filter: saturate(1.5);
-    filter: saturate(1.5);
-    -webkit-transition: all 0;
-    transition: all 0s;
+	-webkit-filter: saturate(1.5);
+	filter: saturate(1.5);
+	-webkit-transition: all 0;
+	transition: all 0s;
 
 }
 .img-responsive(@display: block) {
-    display: @display;
-    max-width: 100%;
-    // Part 1: Set a maximum relative to the parent
-    height: auto;
-    // Part 2: Scale the height according to the width, otherwise you get stretching
+	display: @display;
+	max-width: 100%;
+	// Part 1: Set a maximum relative to the parent
+	height: auto;
+	// Part 2: Scale the height according to the width, otherwise you get stretching
 }

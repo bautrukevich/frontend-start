@@ -4,22 +4,26 @@
   "description": "Help you to start a new project with Gulp",
   "author": "Siarhei Bautrukevich",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bautrukevich/frontend-start"
+  },
   "devDependencies": {
-    "gulp": "^3.8.1",
+    "fd-gulp-less": "*",
+    "gulp": "*",
     "gulp-autoprefixer": "*",
-    "gulp-connect": "*",
+    "gulp-connect": "^2.2.0",
+    "gulp-copy": "0.0.2",
     "gulp-cssmin": "*",
     "gulp-imagemin": "*",
+    "gulp-notify": "*",
+    "gulp-rigger": "*",
     "gulp-sass": "*",
     "gulp-sourcemaps": "*",
-    "gulp-rigger": "*",
     "gulp-uglify": "*",
     "gulp-watch": "*",
     "imagemin-pngquant": "*",
     "opn": "*",
-    "rimraf": "*",
-    "fd-gulp-less": "*",
-    "gulp-gzip": "*",
-    "gulp-notify": "*"
+    "rimraf": "*"
   }
 }
