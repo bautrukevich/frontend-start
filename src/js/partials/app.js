@@ -15,9 +15,6 @@ var App = (function(){
 		init: function(){
 			// Init all modules
 			Common.init();
-			Nav.init();
-			Slider.init();
-			//Modal.init();
 		}
 
 	}
