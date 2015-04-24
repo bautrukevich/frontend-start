@@ -1,15 +1,11 @@
 /* 
 * @Author: Siarhei
 * @Date:   2015-03-06 23:54:36
-* @Last Modified by:   Siarhei Bautrukevich
-* @Last Modified time: 2015-04-05 16:29:37
+* @Last Modified by:   Siarhei
+* @Last Modified time: 2015-04-03 22:22:09
 */
 
 "use strict";
-
-var Settings = {
-
-}
 
 Date.prototype.ddmmyyyy = function(delimeter) {
 	var yyyy = this.getFullYear().toString();

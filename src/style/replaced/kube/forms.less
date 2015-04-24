@@ -1,0 +1,144 @@
+.forms {
+	& label {
+		display: block;
+		margin-bottom: 85px;
+		color: @flatata-blue-color;
+		font-size: 25/15 + 0em; // 25px
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	& input[type="text"],
+	& input[type="password"],
+	& input[type="email"],
+	& input[type="url"],
+	& input[type="phone"],
+	& input[type="tel"],
+	& input[type="number"],
+	& input[type="datetime"],
+	& input[type="date"],
+	& input[type="month"],
+	& input[type="color"],
+	& input[type="time"],
+	& input[type="search"],
+	& input[type="range"],
+	& input[type="file"],
+	& input[type="datetime-local"],
+	& textarea,
+	& select {
+		font-size: 1.4em; // 35px
+		color: @flatata-black-color;
+		display: block;
+	}
+
+	& input[type="text"],
+	& input[type="password"],
+	& input[type="email"],
+	& input[type="url"],
+	& input[type="phone"],
+	& input[type="tel"],
+	& input[type="number"],
+	& input[type="datetime"],
+	& input[type="date"],
+	& input[type="month"],
+	& input[type="color"],
+	& input[type="time"],
+	& input[type="search"],
+	& input[type="range"],
+	& input[type="file"],
+	& input[type="datetime-local"],
+	& select {
+		background: none;
+		border: none;
+		border-bottom: 2px solid @flatata-gray-border-color;
+		.require {
+			background-image: url("../img/required.png");
+			background-repeat: no-repeat;
+			background-position: right top;
+		}
+	}
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	input[type="url"],
+	input[type="phone"],
+	input[type="tel"],
+	input[type="number"],
+	input[type="datetime"],
+	input[type="date"],
+	input[type="month"],
+	input[type="color"],
+	input[type="time"],
+	input[type="search"],
+	input[type="datetime-local"],
+	textarea {
+		//.transition(border ease .5s);
+		&:focus::-webkit-input-placeholder { opacity: 0; transition: opacity 0.2s ease;}
+		&:focus::-moz-placeholder          { opacity: 0; transition: opacity 0.2s ease;}
+		&:focus:-moz-placeholder           { opacity: 0; transition: opacity 0.2s ease;}
+		&:focus:-ms-input-placeholder      { opacity: 0; transition: opacity 0.2s ease;}
+	}
+
+	::-webkit-input-placeholder { color: @flatata-blue-border-color; opacity: 1; transition: opacity 0.1s ease; }
+	::-moz-placeholder          { color: @flatata-blue-border-color; opacity: 1; transition: opacity 0.1s ease; } /* Firefox 19+ */
+	:-moz-placeholder           { color: @flatata-blue-border-color; opacity: 1; transition: opacity 0.1s ease; } /* Firefox 18- */
+	:-ms-input-placeholder      { color: @flatata-blue-border-color; opacity: 1; transition: opacity 0.1s ease; }
+	
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	input[type="url"],
+	input[type="phone"],
+	input[type="tel"],
+	input[type="number"],
+	input[type="datetime"],
+	input[type="date"],
+	input[type="month"],
+	input[type="color"],
+	input[type="time"],
+	input[type="search"],
+	input[type="datetime-local"],
+	textarea {
+		&:focus {
+			outline: none;
+			//border-color: @color-blue;
+			//box-shadow: 0 0 0 2px rgba(red(@color-blue), green(@color-blue), blue(@color-blue), .3), 0 1px 2px rgba(0, 0, 0, .2) inset;
+		}
+	}
+	
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	input[type="url"],
+	input[type="phone"],
+	input[type="tel"],
+	input[type="number"],
+	input[type="datetime"],
+	input[type="date"],
+	input[type="month"] {
+		padding: 15px 0;
+		margin-top: 20px;
+	}
+
+	textarea {
+		border: 2px solid @flatata-textarea-border-color;
+		border-radius: 10px;
+		background: @flatata-background-color;
+		font-size: 0.72em; // 18px
+		padding: 15px 20px;
+		&.description-inline {
+			border: none;
+			border-radius: 0;
+			padding-left: 0;
+			padding-right: 0;
+			background: none;
+			font-size: 18/15 + 0em;
+			color: @flatata-text-color;
+			min-height: 100%;
+			height: auto;
+			margin-top:0; 
+		}
+	}
+
+}

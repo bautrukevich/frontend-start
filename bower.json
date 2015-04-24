@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "homepage": "https://github.com/bautrukevich/frontend-start",
   "authors": [
-    "Siarhei bautrukevich <s.bautrukevich@gmail.com>"
+    "Siarhei Bautrukevich <s.boltrukevich@gmail.com>"
   ],
-  "description": "Frontend start for html+js+css apps",
+  "description": "Frontend boilerplate for html+js+css apps",
   "moduleType": [
     "globals"
   ],
   "license": "MIT",
   "devDependencies": {
     "jquery": "2.*",
-    "kube": "git://github.com/imperavi/kube.git#master",
+    "kube": "git://github.com/imperavi/kube.git#master"
   }
 }

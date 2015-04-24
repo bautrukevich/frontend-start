@@ -14,19 +14,15 @@ var gulp = require('gulp'),
 	connect = require('gulp-connect'),
 	opn = require('opn'),
 	notify = require('gulp-notify'),
-	copy = require('gulp-copy'),
 	less = require('fd-gulp-less');
 
 var path = {
-	project: {
-		name: 'clodsystem',
-	},
 	build: {
 		html: 'build/',
-		js: 'build/assets/sys/js/',
-		css: 'build/assets/sys/css/',
-		img: 'build/assets/sys/img/',
-		fonts: 'build/assets/sys/fonts/'
+		js: 'build/assets/site/js/',
+		css: 'build/assets/site/css/',
+		img: 'build/assets/site/img/',
+		fonts: 'build/assets/site/fonts/'
 	},
 	src: {
 		html: 'src/*.html',
@@ -47,7 +43,7 @@ var path = {
 
 var server = {
 	host: 'localhost',
-	port: '1345'
+	port: '1380'
 };
 
 gulp.task('clean', function (cb) {
@@ -133,25 +129,6 @@ gulp.task('build', [
 	'image:build'
 ]);
 
-gulp.task('build-dev', function() {
-
-    gulp.src('./' + path.build.css + '*')
-        .pipe(copy('../../' + path.project.name + '/public', {prefix: 1}))
-        .pipe(notify('COPY DEV CSS: Done!'));
-
-    gulp.src('./' + path.build.js + '*')
-        .pipe(copy('../../' + path.project.name + '/public', {prefix: 1}))
-        .pipe(notify('COPY DEV JS: Done!'));
-
-    gulp.src('./' + path.build.img + '**')
-        .pipe(copy('../../' + path.project.name + '/public', {prefix: 1}))
-        .pipe(notify('COPY DEV IMG: Done!'));
-
-    gulp.src('./' + path.build.fonts + '**')
-        .pipe(copy('../../' + path.project.name + '/public', {prefix: 1}))
-        .pipe(notify('COPY DEV FONTS: Done!'));
-
-});
 
 gulp.task('watch', function(){
 	watch([path.watch.html], function(event, cb) {
