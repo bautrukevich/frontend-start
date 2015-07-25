@@ -13,3 +13,6 @@ npm-debbug.log
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+public/
+build/
