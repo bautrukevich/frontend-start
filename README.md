@@ -1,7 +1,6 @@
-# Frontend Start
-Help you to start for html+js+css apps
+# Frontend Employment Application
 
-Thanks to Alex Insayt (https://github.com/Insayt) for ideas.
+## Production in build folder
 
 ## To start:
 

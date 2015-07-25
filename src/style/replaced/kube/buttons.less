@@ -1,8 +1,13 @@
+/* =Buttons
+-----------------------------------------------------------------------------*/
 .btn,
 input[type="submit"].btn {
 	display: inline-block;
 	vertical-align: top;
-	font-size: 18/15 + 0em;
+
+	font-family: @font-family-controls;
+	font-size: 1em;
+	font-weight: 400;
 
 	line-height: @base-line;
 
@@ -21,194 +26,150 @@ input[type="submit"].btn {
 
 	color: @color-body;
 	background: @color-gray;
-	
-	height: 45px;
-	padding: 13px 24px;
-
-	&.btn-round {
-		border-radius: 25px;
-	}
-	
-	&.btn-big {
-		height: 57px;
-		.text-caps();
-		border: 2px solid @flatata-blue-dark-color;
-		border-radius: 50px;
-		padding: 13px 24px;
-	}
 
 	&:hover {
 		color: rgba(0, 0, 0, .5);
 		background: @color-gray-dark;
 	}
 }
-
 .btn::-moz-focus-inner {
 	border: 0;
 	padding: 0;
 }
-
-.btn-blue,
-input[type="submit"].btn-blue {
-	
-	color: #fff;
-	background: @flatata-blue-light-color;
-
-	&:hover {
-		color: #fff;
-		background: @flatata-blue-color;
-	}
-
-
-	// &.btn-active {
-	// 	box-shadow: 0 1px 4px rgba(0, 0, 0, @active-shadow) inset;
-	// }
-
-	// &.btn-active,
-	// &.btn-disabled,
-	// &.btn[disabled] {
-	// 	color: rgba(red(@color-text), green(@color-text), blue(@color-text), .5);
-	// 	background: @color-dark;
-	// 	&:hover {
-	// 		color: rgba(red(@color-text), green(@color-text), blue(@color-text), .5);
-	// 	}
-	// }
-
-	&.btn-outline {
-		background: none;
-		border-color: @flatata-blue-light-color;
-		color: @flatata-blue-color;
-		&.btn-big {
-			height: 57px;
-			.text-caps();
-			color: @flatata-blue-dark-text-color;
-			border: 2px solid @flatata-blue-dark-color;
-			border-radius: 50px;
-		}
-		&:hover {
-			color: #fff;
-			background: @flatata-blue-color;
-			border-color: @flatata-blue-color;
-		}
-	}
-
-	// &.btn-outline.btn[disabled],
-	// &.btn-outline.btn-disabled {
-	// 	background: none;
-	// 	box-shadow: none;
-	// 	color: rgba(red(@color), green(@color), blue(@color), .4);
-	// 	border: 1px solid rgba(red(@color), green(@color), blue(@color), .3);
-	// }
-	// &.btn-outline.btn-active {
-	// 	background: none;
-	// 	color: rgba(red(@color), green(@color), blue(@color), .6);
-	// 	border: none;
-	// 	box-shadow: 0 1px 3px rgba(red(@color-dark), green(@color-dark), blue(@color-dark), .6) inset;
-	// }
+.btn-big,
+input[type="submit"].btn-big {
+	font-size: @font-size-big;
 }
-
-.btn-gray,
-input[type="submit"].btn-gray {
-	
-	color: #fff;
-	background: @flatata-gray-light-color;
-
-	&:hover {
-		color: #fff;
-		background: @flatata-gray-color;
-	}
-
-
-	// &.btn-active {
-	// 	box-shadow: 0 1px 4px rgba(0, 0, 0, @active-shadow) inset;
-	// }
-
-	// &.btn-active,
-	// &.btn-disabled,
-	// &.btn[disabled] {
-	// 	color: rgba(red(@color-text), green(@color-text), blue(@color-text), .5);
-	// 	background: @color-dark;
-	// 	&:hover {
-	// 		color: rgba(red(@color-text), green(@color-text), blue(@color-text), .5);
-	// 	}
-	// }
-
-	&.btn-outline {
-		background: none;
-		border-color: @flatata-gray-color;
-		color: @flatata-gray-color;
-		&.btn-big {
-			height: 57px;
-			.text-caps();
-			color: @flatata-blue-dark-text-color;
-			border: 2px solid @flatata-blue-dark-color;
-			border-radius: 50px;
-		}
-		&:hover {
-			color: #fff;
-			background: @flatata-gray-color;
-			border-color: @flatata-gray-color;
-		}
-	}
-
-	// &.btn-outline.btn[disabled],
-	// &.btn-outline.btn-disabled {
-	// 	background: none;
-	// 	box-shadow: none;
-	// 	color: rgba(red(@color), green(@color), blue(@color), .4);
-	// 	border: 1px solid rgba(red(@color), green(@color), blue(@color), .3);
-	// }
-	// &.btn-outline.btn-active {
-	// 	background: none;
-	// 	color: rgba(red(@color), green(@color), blue(@color), .6);
-	// 	border: none;
-	// 	box-shadow: 0 1px 3px rgba(red(@color-dark), green(@color-dark), blue(@color-dark), .6) inset;
-	// }
+.btn-small,
+input[type="submit"].btn-small {
+	font-size: @font-size-small;
 }
-
+.btn-smaller,
+input[type="submit"].btn-smaller {
+	font-size: @font-size-smaller;
+	vertical-align: baseline;
+}
+.btn-round {
+	border-radius: 15px;
+}
 .btn-outline,
 input[type="submit"].btn-outline {
 
 	background: none;
-	padding: 8px 24px;
+	padding: @padding-btn-outline;
 	border: 1px solid @color-black;
 	&:hover {
 		border-color: @color-gray-dark;
 	}
 }
-// .btn-outline.btn-active {
-// 	padding: @padding-btn;
-// }
+.btn-outline.btn-active {
+	padding: @padding-btn;
+}
+.btn-outline.bold {
+	border-width: 2px;
+	padding: @padding-btn-outline-bold;
+}
+.btn-active,
+.btn[disabled],
+.btn-disabled {
+	background: none;
+	background: @color-gray-dark;
+	color: rgba(0, 0, 0, .5);
+	&:hover {
+		color: rgba(0, 0, 0, .5);
+		background: @color-gray-dark;
+	}
+}
+.btn-active {
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .4) inset;
+}
+.btn-outline.btn[disabled],
+.btn-outline.btn-disabled {
+	background: none;
+	box-shadow: none;
+	color: rgba(0, 0, 0, .3);
+	border: 1px solid rgba(0, 0, 0, .1);
+}
+.btn-outline.btn-active {
+	background: none;
+	color: rgba(0, 0, 0, .4);
+	border: none;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .2) inset;
+}
+.btn[disabled],
+.btn-disabled {
+	cursor: default;
+	box-shadow: none;
+}
 
-// .btn-active,
-// .btn[disabled],
-// .btn-disabled {
-// 	background: none;
-// 	background: @color-gray-dark;
-// 	color: rgba(0, 0, 0, .5);
-// 	&:hover {
-// 		color: rgba(0, 0, 0, .5);
-// 		background: @color-gray-dark;
-// 	}
-// }
-// .btn-active {
-// 	box-shadow: 0 1px 3px rgba(0, 0, 0, .4) inset;
-// }
-// .btn-outline.btn[disabled],
-// .btn-outline.btn-disabled {
-// 	background: none;
-// 	box-shadow: none;
-// 	color: rgba(0, 0, 0, .3);
-// 	border: 1px solid rgba(0, 0, 0, .1);
-// }
-// .btn-outline.btn-active {
-// 	background: none;
-// 	color: rgba(0, 0, 0, .4);
-// 	border: none;
-// 	box-shadow: 0 1px 3px rgba(0, 0, 0, .2) inset;
-// }
-// .btn[disabled],
-// .btn-disabled {
-// 	cursor: default;
-// 	box-shadow: none;
-// }
+
+.btn-blue,
+input[type="submit"].btn-blue {
+	.make-color-btn(@color-blue, @color-blue-dark, #fff);
+}
+.btn-red,
+input[type="submit"].btn-red {
+	.make-color-btn(@color-red, @color-red-dark, #fff);
+}
+.btn-green,
+input[type="submit"].btn-green {
+	.make-color-btn(@color-green, @color-green-dark, #fff);
+}
+.btn-black,
+input[type="submit"].btn-black {
+	.make-color-btn(@color-black, @color-black-light, #fff, .7);
+}
+.btn-yellow,
+input[type="submit"].btn-yellow {
+	.make-color-btn(@color-yellow, @color-yellow-dark, #000);
+}
+.btn-white,
+input[type="submit"].btn-white {
+	.make-color-btn(@color-white, darken(#fff, 7%), #000, .2);
+}
+
+.btn-white {
+	&.btn-outline.btn-active {
+		box-shadow: none;
+		border: 1px solid rgba(255, 255, 255, .3);
+		padding: @padding-btn-outline;
+	}
+}
+
+
+/*
+	Buttons Group
+*/
+.btn-single,
+.btn-group {
+	display: inline-block;
+	margin-right: 2px;
+	.clearfix;
+	vertical-align: bottom;
+}
+.btn-single > .btn,
+.btn-single > input,
+.btn-group > .btn,
+.btn-group > input {
+	float: left;
+	border-radius: 0;
+	margin-left: -1px;
+}
+.btn-single > .btn {
+	border-radius: 2px;
+}
+.btn-group > .btn:first-child {
+	border-radius: 2px 0 0 2px;
+}
+.btn-group > .btn:last-child {
+	border-radius: 0 2px 2px 0;
+}
+.btn-group > .btn.btn-round:first-child,
+.btn-group > .input-search:first-child {
+	border-radius: 15px 0 0 15px;
+}
+.btn-group > .btn.btn-round:last-child,
+.btn-group > .input-search:last-child {
+	border-radius: 0 15px 15px 0;
+}
+

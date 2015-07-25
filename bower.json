@@ -12,6 +12,7 @@
   "license": "MIT",
   "devDependencies": {
     "jquery": "2.*",
-    "kube": "git://github.com/imperavi/kube.git#master"
+    "kube": "git://github.com/imperavi/kube.git#master",
+    "jquery.serializeJSON": "~2.6.1"
   }
 }

@@ -1,0 +1,34 @@
+select {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 100%;
+	-moz-appearance: none;
+	text-overflow: '';
+	-ms-appearance: none;
+	appearance: none!important;
+	background: #FFF;
+	border-color: #ccc;
+	border-radius: 0;
+	vertical-align: middle;
+	font-size: 1em;
+	line-height: 1.65em;
+	padding: .3em .35em;
+	background-image: url('../img/caret.png');
+	background-repeat: no-repeat;
+	background-position: right 14px;
+	border-radius: 4px;
+
+	&:focus {
+		outline: none;
+		border-color: @color-blue;
+		box-shadow: 0 0 0 2px rgba(red(@color-blue), green(@color-blue), blue(@color-blue), .3), 0 1px 2px rgba(0, 0, 0, .2) inset;
+	}
+	.transition(border ease .5s);
+	border-top-style: none;
+	border-bottom-style: none;
+	border: 1px solid #ccc;
+
+}
+select::-ms-expand {
+	display: none;
+}

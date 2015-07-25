@@ -1,13 +1,28 @@
+/* =Forms
+-----------------------------------------------------------------------------*/
+.forms  {
+	& .btn,
+	& input[type="submit"].btn,
+	& button,
+	& input[type="submit"],
+	& input[type="reset"] {
+		padding: @padding-btn-in-forms;
+	}
+	& .btn-outline, {
+		padding: @padding-btn-outline-in-forms;
+	}
+	& .btn-outline.bold {
+		padding: @padding-btn-outline-bold-in-forms;
+	}
+}
+
+
 .forms {
 	& label {
 		display: block;
-		margin-bottom: 85px;
-		color: @flatata-blue-color;
-		font-size: 25/15 + 0em; // 25px
-		&:hover {
-			cursor: pointer;
-		}
+		margin-bottom: @base-line / 1.5;
 	}
+
 	& input[type="text"],
 	& input[type="password"],
 	& input[type="email"],
@@ -26,11 +41,11 @@
 	& input[type="datetime-local"],
 	& textarea,
 	& select {
-		font-size: 1.4em; // 35px
-		color: @flatata-black-color;
 		display: block;
 	}
-
+}
+.forms-inline,
+.forms-inline-list {
 	& input[type="text"],
 	& input[type="password"],
 	& input[type="email"],
@@ -47,98 +62,205 @@
 	& input[type="range"],
 	& input[type="file"],
 	& input[type="datetime-local"],
+	& textarea,
 	& select {
-		background: none;
-		border: none;
-		border-bottom: 2px solid @flatata-gray-border-color;
-		.require {
-			background-image: url("../img/required.png");
-			background-repeat: no-repeat;
-			background-position: right top;
+		display: inline-block;
+	}
+}
+
+.forms-list,
+.forms-inline,
+.forms-inline-list {
+	margin: 0;
+	padding: 0;
+	margin-bottom: @base-line / 1.5;
+	list-style: none;
+}
+.forms-list label,
+.forms-inline label,
+.forms-inline-list li,
+.forms-inline-list li label {
+	display: inline-block;
+	margin-bottom: 0;
+}
+.forms-inline-list li label {
+	margin-right: @base-line / 2;
+}
+.forms-inline-list li {
+	margin-bottom: 3px;
+}
+.forms-list li {
+	margin-bottom: 6px;
+}
+.forms-desc {
+	margin-top: 4px;
+	color: rgba(0, 0, 0, .4);
+	font-size: @font-size-small;
+	line-height: 1.4em;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="phone"],
+input[type="tel"],
+input[type="number"],
+input[type="datetime"],
+input[type="date"],
+input[type="month"],
+input[type="color"],
+input[type="time"],
+input[type="search"],
+input[type="datetime-local"],
+textarea {
+	.transition(border ease .5s);
+}
+
+
+/* States */
+.error,
+.success {
+	font-weight: normal;
+	font-size: @font-size-small;
+}
+input.input-error,
+textarea.input-error,
+select.input-error,
+.input-error {
+	border-color: @color-red;
+	box-shadow: 0 0 0 2px rgba(red(@color-red), green(@color-red), blue(@color-red), .3),0 1px 2px rgba(0, 0, 0, .2) inset;
+}
+input.input-success,
+textarea.input-success,
+select.input-success,
+.input-success  {
+	border-color: @color-green;
+	box-shadow: 0 0 0 2px rgba(red(@color-green), green(@color-green), blue(@color-green), .3),0 1px 2px rgba(0, 0, 0, .2) inset;
+
+}
+input.input-gray,
+textarea.input-gray,
+select.input-gray,
+.input-gray {
+	border-color: @color-gray-dark;
+	box-shadow: 0 0 0 2px rgba(red(@color-gray-dark), green(@color-gray-dark), blue(@color-gray-dark), .4), 0 1px 2px rgba(0, 0, 0, .2) inset;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="phone"],
+input[type="tel"],
+input[type="number"],
+input[type="datetime"],
+input[type="date"],
+input[type="month"],
+input[type="color"],
+input[type="time"],
+input[type="search"],
+input[type="datetime-local"],
+textarea {
+	&:focus {
+		outline: none;
+		border-color: @color-blue;
+		box-shadow: 0 0 0 2px rgba(red(@color-blue), green(@color-blue), blue(@color-blue), .3), 0 1px 2px rgba(0, 0, 0, .2) inset;
+	}
+}
+
+/*
+	Search
+*/
+input.input-search,
+input[type="search"] {
+	padding-right: .5em;
+	padding-left: .5em;
+	margin-bottom: 0;
+	border-radius: 15px;
+}
+
+input.input-on-black {
+	border: 1px solid rgba(255, 255, 255, .1);
+	background: rgba(255, 255, 255, .35);
+	&::-webkit-input-placeholder {
+		color: rgba(255, 255, 255, .6);
+	}
+	&::-moz-placeholder {
+		color: rgba(255, 255, 255, .6);
+	}
+	&:focus,
+	&.active {
+		border: 1px solid #fff;
+		background: #fff;
+		box-shadow: none;
+		&::-webkit-input-placeholder {
+			color: #aaa;
+		}
+		&::-moz-placeholder {
+			color: #aaa;
 		}
 	}
+}
 
-	input[type="text"],
-	input[type="password"],
-	input[type="email"],
-	input[type="url"],
-	input[type="phone"],
-	input[type="tel"],
-	input[type="number"],
-	input[type="datetime"],
-	input[type="date"],
-	input[type="month"],
-	input[type="color"],
-	input[type="time"],
-	input[type="search"],
-	input[type="datetime-local"],
-	textarea {
-		//.transition(border ease .5s);
-		&:focus::-webkit-input-placeholder { opacity: 0; transition: opacity 0.2s ease;}
-		&:focus::-moz-placeholder          { opacity: 0; transition: opacity 0.2s ease;}
-		&:focus:-moz-placeholder           { opacity: 0; transition: opacity 0.2s ease;}
-		&:focus:-ms-input-placeholder      { opacity: 0; transition: opacity 0.2s ease;}
+/* Sizes */
+input.input-big {
+	font-size: @font-size-big;
+}
+input.input-small {
+	font-size: @font-size-small;
+}
+input.input-smaller {
+	font-size: @font-size-smaller;
+}
+
+/* Append & Prepend */
+.input-groups {
+	display: table !important;
+
+	& input {
+		width: 100%;
 	}
 
-	::-webkit-input-placeholder { color: @flatata-blue-border-color; opacity: 1; transition: opacity 0.1s ease; }
-	::-moz-placeholder          { color: @flatata-blue-border-color; opacity: 1; transition: opacity 0.1s ease; } /* Firefox 19+ */
-	:-moz-placeholder           { color: @flatata-blue-border-color; opacity: 1; transition: opacity 0.1s ease; } /* Firefox 18- */
-	:-ms-input-placeholder      { color: @flatata-blue-border-color; opacity: 1; transition: opacity 0.1s ease; }
-	
-	input[type="text"],
-	input[type="password"],
-	input[type="email"],
-	input[type="url"],
-	input[type="phone"],
-	input[type="tel"],
-	input[type="number"],
-	input[type="datetime"],
-	input[type="date"],
-	input[type="month"],
-	input[type="color"],
-	input[type="time"],
-	input[type="search"],
-	input[type="datetime-local"],
-	textarea {
-		&:focus {
-			outline: none;
-			//border-color: @color-blue;
-			//box-shadow: 0 0 0 2px rgba(red(@color-blue), green(@color-blue), blue(@color-blue), .3), 0 1px 2px rgba(0, 0, 0, .2) inset;
-		}
-	}
-	
-	input[type="text"],
-	input[type="password"],
-	input[type="email"],
-	input[type="url"],
-	input[type="phone"],
-	input[type="tel"],
-	input[type="number"],
-	input[type="datetime"],
-	input[type="date"],
-	input[type="month"] {
-		padding: 15px 0;
-		margin-top: 20px;
+	& input,
+	& .input-append,
+	& .input-prepend,
+	& .btn-append {
+		display: table-cell !important;
 	}
 
-	textarea {
-		border: 2px solid @flatata-textarea-border-color;
-		border-radius: 10px;
-		background: @flatata-background-color;
-		font-size: 0.72em; // 18px
-		padding: 15px 20px;
-		&.description-inline {
-			border: none;
-			border-radius: 0;
-			padding-left: 0;
-			padding-right: 0;
-			background: none;
-			font-size: 18/15 + 0em;
-			color: @flatata-text-color;
-			min-height: 100%;
-			height: auto;
-			margin-top:0; 
-		}
+	& .btn-append,
+	& .input-append,
+	& .input-prepend {
+		width: 1%;
+		vertical-align: middle;
 	}
 
+	& .input-append,
+	& .input-prepend {
+		background-color: @color-input-append-background;
+		border: 1px solid @color-input-append-border;
+		margin: 0;
+		padding: .45em .75em .15em .75em;
+		color: rgba(0, 0, 0, .6);
+		line-height: @base-line;
+		font-size: @font-size-small;
+		white-space: nowrap;
+	}
+
+	& .input-prepend {
+		border-right: none;
+	}
+
+	& .input-append {
+		position: relative;
+		z-index: 1;
+		border-left: none;
+	}
+
+	& .btn-append .btn {
+		display: block;
+		height: auto;
+		border-radius: 0 2px 2px 0;
+	}
 }
