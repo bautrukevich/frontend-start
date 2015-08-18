@@ -10,3 +10,34 @@ html, body {
 .unit-max {
 	max-width: 1000px;
 }
+
+.no-padding {
+	padding: 0!important;
+}
+
+.link {
+	.animate_in();
+	text-decoration: none;
+	border-bottom: 1px solid fade(@color-link, 20%);
+	line-height: 1;
+	&:hover, &:focus {
+		text-decoration: none;
+		border-bottom: 1px solid fade(@color-link-hover, 20%);
+		.animate_out();
+	}
+	&-pseudo {
+		text-decoration: none;
+		border-bottom: 1px dashed fade(@color-link, 20%);
+		line-height: 1;
+		.animate_in();
+		&:hover, &:focus {
+			text-decoration: none;
+			border-bottom: 1px dashed fade(@color-link-hover, 20%);
+			.animate_out();
+		}
+	}
+}
+
+a.btn:hover, a.btn:visited {
+	color: #fff;
+}
